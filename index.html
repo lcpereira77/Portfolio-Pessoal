@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lucas Pereira · Estudante de IA</title>
+<meta name="description" content="Portfólio de Lucas Pereira, estudante de Inteligência Artificial e desenvolvedor em formação.">
+<style>
+:root{--bg:#08080B;--sf:#111116;--p:#8B5CF6;--pl:#A78BFA;--tx:#F5F5F7;--t2:#A1A1AA;--bd:#23232b;--r:10px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--pl);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:96px 0}
+h1,h2,h3{line-height:1.1;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
+.eyebrow{font:600 .78rem/1 ui-monospace,Menlo,monospace;color:var(--pl);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;display:block}
+.sub{color:var(--t2);max-width:640px;margin:0 0 40px}
+.pr{position:fixed;top:0;left:0;height:2px;width:0;background:var(--p);z-index:60}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;background:rgba(8,8,11,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:700;letter-spacing:-.02em}.brand b{color:var(--pl)}
+.links{display:flex;gap:28px;align-items:center}
+.links a{color:var(--t2);font-size:.92rem;transition:color .2s}.links a:hover{color:var(--tx)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:8px;font-weight:600;font-size:.95rem;border:1px solid var(--bd);background:transparent;color:var(--tx);cursor:pointer;transition:.2s}
+.btn:hover{border-color:var(--pl);transform:translateY(-1px)}
+.btn.pri{background:var(--p);border-color:var(--p)}.btn.pri:hover{background:var(--pl);border-color:var(--pl);color:#08080B}
+.links .btn{min-height:38px;padding:0 16px;color:var(--tx)}
+.burger{display:none;background:none;border:1px solid var(--bd);color:var(--tx);width:44px;height:44px;border-radius:8px;cursor:pointer}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 72px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--bd) 1px,transparent 1px),linear-gradient(90deg,var(--bd) 1px,transparent 1px);background-size:56px 56px;opacity:.35;-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;position:relative}
+.tag{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--bd);background:var(--sf);padding:8px 14px;border-radius:99px;font-size:.82rem;color:var(--t2);margin-bottom:26px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--p);box-shadow:0 0 10px var(--p);animation:pulse 2.4s infinite}
+@keyframes pulse{50%{opacity:.35}}
+h1{font-size:clamp(2.5rem,6.5vw,4.8rem);margin-bottom:22px}
+h1 em{font-style:normal;color:var(--pl)}
+.hero p{color:var(--t2);font-size:1.08rem;max-width:540px;margin:0 0 34px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.photo{position:relative;aspect-ratio:4/5;max-width:340px;justify-self:center;width:100%}
+.photo::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--p);border-radius:var(--r);opacity:.6}
+.photo .frame{position:absolute;inset:0;border-radius:var(--r);overflow:hidden;background:var(--sf);border:1px solid var(--bd);display:grid;place-items:center;box-shadow:0 0 80px -20px rgba(139,92,246,.45)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .mono{font:700 5rem/1 ui-monospace,Menlo,monospace;color:var(--pl)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:26px}
+.pt{display:flex;gap:16px}.pt+.pt{margin-top:22px}
+.pt .n{font:600 .8rem ui-monospace,Menlo,monospace;color:var(--pl);padding-top:5px}
+.pt p{margin:0;color:var(--t2)}
+.quote{font-size:clamp(1.3rem,2.6vw,1.75rem);font-weight:600;line-height:1.35;margin:0 0 20px;padding-left:20px;border-left:2px solid var(--p)}
+.soft h3{font-size:1.05rem;margin-bottom:12px;color:var(--pl)}.soft p{color:var(--t2);margin:0 0 14px}.soft p:last-child{margin:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.chip{min-height:40px;padding:0 16px;border-radius:99px;border:1px solid var(--bd);background:transparent;color:var(--t2);cursor:pointer;font-size:.88rem;transition:.2s}
+.chip:hover{color:var(--tx)}.chip[aria-pressed=true]{background:var(--p);border-color:var(--p);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.proj{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.proj:hover{transform:translateY(-4px);border-color:var(--p)}
+.thumb{height:130px;display:flex;align-items:flex-end;padding:16px;background:linear-gradient(135deg,#15121f,#0c0c11);border-bottom:1px solid var(--bd);position:relative;overflow:hidden}
+.thumb::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border:1px solid var(--p);border-radius:50%;opacity:.35}
+.thumb span{font:700 1.5rem ui-monospace,Menlo,monospace;color:var(--pl);letter-spacing:-.03em;position:relative}
+.pb{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.pb h3{font-size:1.2rem}.pb p{margin:0;color:var(--t2);font-size:.93rem}
+.pb ul{margin:0;padding-left:18px;color:var(--t2);font-size:.9rem}
+.status{font:600 .7rem ui-monospace,Menlo,monospace;color:var(--pl);letter-spacing:.1em;text-transform:uppercase}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+.tags span,.sk span{font-size:.78rem;padding:4px 10px;border:1px solid var(--bd);border-radius:6px;color:var(--t2);background:var(--bg)}
+.note{margin-top:28px;color:var(--t2);font-size:.9rem}
+.sk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sk h3{font-size:1rem;margin-bottom:4px}.sk small{display:block;color:var(--t2);margin-bottom:16px;font-size:.85rem}
+.sk div{display:flex;flex-wrap:wrap;gap:8px}
+.sk.on{border-color:var(--p)}
+.tl{border-left:1px solid var(--bd);margin-left:6px}
+.tl div{position:relative;padding:0 0 30px 28px}.tl div::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--p)}
+.tl b{display:block}.tl small{color:var(--pl);font:600 .78rem ui-monospace,Menlo,monospace}.tl p{margin:4px 0 0;color:var(--t2)}
+.contact{text-align:center;border:1px solid var(--bd);border-radius:var(--r);padding:72px 22px;background:radial-gradient(ellipse at 50% 0,rgba(139,92,246,.16),transparent 65%),var(--sf)}
+.contact h2{max-width:640px;margin:0 auto 16px}.contact p{color:var(--t2);margin:0 auto 32px;max-width:480px}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--bd);padding:36px 0;color:var(--t2);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer nav{all:unset;display:flex;gap:18px}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(max-width:860px){
+ section{padding:72px 0}
+ .hero .wrap,.about-grid,.sk-grid{grid-template-columns:1fr}
+ .photo{max-width:260px;order:-1;justify-self:start;margin-left:14px}
+ .burger{display:block}
+ .links{position:fixed;top:calc(64px + env(safe-area-inset-top,0px));left:0;right:0;background:var(--bg);flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 22px;border-bottom:1px solid var(--bd);display:none}
+ .links.open{display:flex}.links a{padding:14px 0;font-size:1.05rem}.links .btn{margin-top:10px}
+ .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="pr" id="pr"></div>
+<nav aria-label="Principal"><div class="wrap">
+ <a class="brand" href="#inicio">Lucas<b>.</b>Pereira</a>
+ <button class="burger" id="bg" aria-label="Abrir menu" aria-expanded="false" aria-controls="lk">☰</button>
+ <div class="links" id="lk">
+  <a href="#inicio">Início</a><a href="#sobre">Sobre mim</a><a href="#projetos">Projetos</a><a href="#habilidades">Habilidades</a><a href="#contato">Contato</a>
+  <a class="btn pri" href="#contato">Vamos conversar</a>
+ </div>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+ <div>
+  <span class="tag"><i class="dot"></i>Estudante de Inteligência Artificial • Desenvolvedor em formação</span>
+  <h1>Transformando ideias em <em>soluções</em> inteligentes.</h1>
+  <p>Me interesso por inteligência artificial, automação, desenvolvimento de aplicações e pela criação de soluções tecnológicas que resolvam problemas de verdade.</p>
+  <div class="cta"><a class="btn pri" href="#projetos">Explorar projetos</a><a class="btn" href="#sobre">Sobre mim</a></div>
+ </div>
+ <div class="photo"><div class="frame">
+  
+  <div class="mono" aria-hidden="true">LP</div>
+  <img src="foto.jpg" alt="Foto de Lucas Pereira" loading="eager" width="560" height="700" style="position:absolute;inset:0;object-position:50% 20%" onerror="this.remove()">
+ </div></div>
+</div></header>
+
+<section id="sobre"><div class="wrap">
+ <span class="eyebrow rv">01 · Sobre mim</span>
+ <p class="quote rv">Sempre aprendendo, construindo e explorando novas possibilidades!</p>
+ <div class="about-grid">
+  <div class="card rv">
+   <div class="pt"><span class="n">01</span><p>Olá! Sou estudante de Inteligência Artificial, apaixonado por tecnologia, inovação e pelo potencial da IA para transformar ideias em soluções reais.</p></div>
+   <div class="pt"><span class="n">02</span><p>Tenho interesse em inteligência artificial generativa, automação de processos, desenvolvimento de aplicações e criação de agentes inteligentes. Gosto de explorar novas ferramentas, experimentar tecnologias e desenvolver projetos que unam criatividade, lógica e praticidade.</p></div>
+   <div class="pt"><span class="n">03</span><p>Estou sempre em busca de novos conhecimentos e oportunidades para aprimorar minhas habilidades, transformar ideias em projetos e evoluir constantemente na área de tecnologia.</p></div>
+   <div class="pt"><span class="n">04</span><p>Acredito que a tecnologia vai muito além do código: ela também envolve criatividade, comunicação, colaboração e a capacidade de identificar problemas e encontrar soluções.</p></div>
+   <div class="pt"><span class="n">05</span><p>Este portfólio é meu espaço para compartilhar projetos, registrar minha evolução e colocar em prática tudo o que venho aprendendo nessa jornada pela Inteligência Artificial.</p></div>
+  </div>
+  <div class="card soft rv">
+   <h3>Personalidade e habilidades interpessoais</h3>
+   <p>Sou extremamente comunicativo, curioso e gosto genuinamente de conversar, conhecer pessoas e trocar experiências. Acredito que boas ideias nascem não só do conhecimento técnico, mas também de ouvir, dialogar, colaborar e enxergar diferentes perspectivas.</p>
+   <p>Busco evoluir continuamente em comunicação, trabalho em equipe, criatividade e resolução de problemas, saindo da zona de conforto e aprendendo com os outros.</p>
+   <p>Para mim, unir conhecimento tecnológico e inteligência interpessoal é o que gera soluções relevantes, boas parcerias e impacto positivo. Quero crescer sem perder o essencial: a curiosidade, a conexão com pessoas e a vontade constante de aprender.</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="projetos"><div class="wrap">
+ <span class="eyebrow rv">02 · Projetos</span>
+ <h2 class="rv">O que já construí</h2>
+ <p class="sub rv">Projetos acadêmicos, experimentais e pessoais. Os que ainda são protótipos ou exploração estão identificados como tal.</p>
+ <div class="filters" id="fl" role="group" aria-label="Filtrar projetos"></div>
+ <div class="grid" id="gr"></div>
+ <p class="note">Repositórios e demos serão adicionados conforme forem publicados.</p>
+</div></section>
+
+<section id="habilidades"><div class="wrap">
+ <span class="eyebrow rv">03 · Habilidades e interesses</span>
+ <h2 class="rv">Prática, estudo e curiosidade</h2>
+ <p class="sub rv">Separado de forma honesta: o que já usei, o que estou aprendendo e o que ainda quero explorar.</p>
+ <div class="sk-grid">
+  <div class="card sk on rv"><h3>Já usei na prática</h3><small>Em projetos reais</small><div><span>Python (básico)</span><span>Lovable</span><span>GPT4All / modelos locais</span><span>Browse AI</span><span>ReportLab</span><span>Gamma</span><span>HTML</span><span>Engenharia de prompts</span></div></div>
+  <div class="card sk rv"><h3>Estudando</h3><small>Na graduação e por conta própria</small><div><span>Fundamentos de programação</span><span>Python</span><span>Cálculo Diferencial</span><span>Lógica formal</span><span>Engenharia de software</span><span>Chatbots</span></div></div>
+  <div class="card sk rv"><h3>Interesse</h3><small>Quero aprofundar</small><div><span>IA generativa</span><span>Agentes inteligentes</span><span>Automação de processos</span><span>Integrações com APIs</span><span>Ciência de dados</span><span>Segurança da informação</span></div></div>
+ </div>
+</div></section>
+
+<section id="trajetoria"><div class="wrap">
+ <span class="eyebrow rv">04 · Trajetória</span>
+ <h2 class="rv">Em movimento</h2>
+ <p class="sub rv">Começando cedo, com foco em prática.</p>
+ <div class="tl rv">
+  <div><small>2025</small><b>Curso técnico em Inteligência Artificial</b><p>Formação profissionalizante em Juiz de Fora.</p></div>
+  <div><small>2025</small><b>Fundamentos de Data Science e IA</b><p>Curso online na Data Science Academy.</p></div>
+  <div><small>2026</small><b>Bacharelado em Inteligência Artificial</b><p>Uniacademia, Juiz de Fora. Cursando o 2º de 8 períodos.</p></div>
+  <div><small>Agora</small><b>Buscando a primeira experiência profissional</b><p>Construindo projetos e procurando oportunidades para colocar o aprendizado em prática.</p></div>
+ </div>
+</div></section>
+
+<section id="contato"><div class="wrap"><div class="contact rv">
+ <h2>Tem uma ideia interessante? Vamos construir algo juntos.</h2>
+ <p>Aberto a estágio, primeiro emprego, networking e parcerias em projetos.</p>
+ <div class="cta">
+  <a class="btn pri" href="mailto:lucaspereirajf008@gmail.com">lucaspereirajf008@gmail.com</a>
+  <a class="btn" href="https://github.com/lcpereira77" target="_blank" rel="noopener">GitHub</a>
+  <a class="btn" href="tel:+5532991026304">(32) 99102-6304</a>
+ </div>
+</div></div></section>
+
+<footer><div class="wrap">
+ <span>© <span id="yr"></span> Lucas Pereira · Código é só o começo.</span>
+ <nav aria-label="Rodapé"><a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></nav>
+</div></footer>
+
+<script>
+// EDITE AQUI: projetos. Adicione "link" com URL real quando existir.
+const P=[
+{n:"AcumuleAI",c:"Apps com IA",s:"Projeto acadêmico",d:"App de acompanhamento emocional diário, voltado a apoiar profissionais com informações organizadas.",f:["Registro emocional diário","Relatórios por período","Alertas automáticos"],t:["Lovable","ReportLab","Gamma"],m:"Desenvolvido em dupla com José Marino na disciplina de Engenharia de Prompts e Chatbots; entreguei também o PDF e a apresentação."},
+{n:"Chatbot offline de carros esportivos",c:"Apps com IA",s:"Projeto experimental",d:"Chatbot em Python que roda 100% local, sem internet, respondendo com base em uma base de conhecimento.",f:["Modelo local","Funciona offline","Base sobre carros esportivos"],t:["Python","GPT4All","Orca Mini 3B"],m:"Montei o chatbot e a base de conhecimento."},
+{n:"Scraping do Brasileirão Série A",c:"Dados",s:"Projeto acadêmico",d:"Coleta automatizada de dados do Globo Esporte e geração de relatório em PDF.",f:["Extração automática","Relatório em PDF"],t:["Browse AI","ReportLab"],m:"Configurei a extração e o relatório."},
+{n:"Localizador de veículos",c:"Web e dashboards",s:"Protótipo",d:"App para acompanhar a localização de veículos de uma empresa familiar, com visual escuro e tecnológico.",f:["Integração com GPS (AccuTag)","Interface dark/tech"],t:[],m:"Concepção e desenvolvimento do app."},
+{n:"Agente para o eProc TJMG",c:"Automação",s:"Exploração, em estudo",d:"Ideia de agente que lê fotos de despachos, extrai número do processo e chave de acesso e acessa o eProc.",f:["Extração a partir de imagem","Acesso automatizado"],t:[],m:"Pesquisa e desenho da solução; ainda não é um produto pronto."},
+{n:"Plano 100/100",c:"Web e dashboards",s:"Projeto pessoal",d:"Infográfico semanal de treino em HTML, para visualizar a rotina de forma clara.",f:["Visual semanal","Página HTML única"],t:["HTML","CSS"],m:"Criei o conteúdo e o layout."}
+];
+const $=s=>document.querySelector(s),fl=$("#fl"),gr=$("#gr");
+const cats=["Todos",...new Set(P.map(p=>p.c))];
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+function draw(c){gr.innerHTML=P.filter(p=>c==="Todos"||p.c===c).map(p=>`<article class="proj rv in"><div class="thumb" role="img" aria-label="Capa do projeto ${esc(p.n)}"><span>${esc(p.n.split(" ")[0])}</span></div><div class="pb"><span class="status">${esc(p.s)}</span><h3>${esc(p.n)}</h3><p>${esc(p.d)}</p><ul>${p.f.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p><b style="color:var(--tx)">Contribuição:</b> ${esc(p.m)}</p>${p.t.length?`<div class="tags">${p.t.map(x=>`<span>${esc(x)}</span>`).join("")}</div>`:""}${p.link?`<a class="btn" href="${p.link}" target="_blank" rel="noopener">Ver projeto</a>`:""}</div></article>`).join("")}
+cats.forEach((c,i)=>{const b=document.createElement("button");b.className="chip";b.textContent=c;b.setAttribute("aria-pressed",i==0);b.onclick=()=>{fl.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));draw(c)};fl.appendChild(b)});
+draw("Todos");
+$("#yr").textContent=new Date().getFullYear();
+const bg=$("#bg"),lk=$("#lk");
+bg.onclick=()=>{const o=lk.classList.toggle("open");bg.setAttribute("aria-expanded",o);bg.textContent=o?"✕":"☰"};
+lk.querySelectorAll("a").forEach(a=>a.onclick=()=>{lk.classList.remove("open");bg.setAttribute("aria-expanded",false);bg.textContent="☰"});
+addEventListener("scroll",()=>{const h=document.documentElement;$("#pr").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".rv:not(.in)").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
